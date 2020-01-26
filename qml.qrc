@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Cell.qml</file>
+        <file>Board.qml</file>
+        <file>SelectionPopup.qml</file>
+        <file>SelectionPopupCell.qml</file>
+        <file>img/x.png</file>
+        <file>CongratulationPopup.qml</file>
+        <file>CloseButton.qml</file>
+        <file>RetryPopup.qml</file>
+        <file>LevelSelector.qml</file>
+        <file>img/run.png</file>
+        <file>Star.qml</file>
+        <file>NewGame.qml</file>
+        <file>Hint.qml</file>
+        <file>PadNumber.qml</file>
+        <file>Settings.qml</file>
+        <file>img/hint0.png</file>
+        <file>img/hint1.png</file>
+        <file>img/star0.png</file>
+        <file>img/star1.png</file>
+        <file>SettingsPopup.qml</file>
+        <file>img/settings.png</file>
+        <file>img/checkbox0.png</file>
+        <file>Checkbox.qml</file>
+        <file>img/checkbox1.png</file>
+        <file>Radiobutton.qml</file>
+        <file>img/rb0.png</file>
+        <file>img/rb1.png</file>
+        <file>img/no.png</file>
+        <file>ExtraPad.qml</file>
+        <file>Controls.qml</file>
+        <file>Help.qml</file>
+        <file>img/help.png</file>
+        <file>img/win.png</file>
+        <file>HelpPopup.qml</file>
+        <file>NewGameGenerationSplash.qml</file>
+        <file>img/wait.gif</file>
+        <file>ScorePopup.qml</file>
+        <file>img/info.png</file>
+        <file>Info.qml</file>
+    </qresource>
+</RCC>
