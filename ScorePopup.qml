@@ -246,6 +246,53 @@ Popup
         ScrollBar.vertical: ScrollBar { active: true; policy: ScrollBar.AlwaysOn  }
     }
 
+    Item
+    {
+        id: clearScores
+        width: 18 * parent.width / 20
+        height: width / 15
+        anchors.top: scoreListWithHints.bottom
+        anchors.topMargin: height / 2
+        anchors.left: parent.left
+        anchors.leftMargin: parent.width / 20
+
+        Text
+        {
+            id: clearScoresText
+            color: "#0000ff"
+            anchors.fill: parent
+            text: qsTr("Clear Statistics")
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: parent.width / 25
+        }
+
+        MouseArea
+        {
+            id: clearScoresMouseArea
+            onClicked: clear_score_stats()
+            anchors.fill: parent
+        }
+    }
+
+    YesNoPopup
+    {
+        id: clearYesNoPopup
+        width: 12 * parent.width / 20
+        height: 6 * parent.height / 20
+        x: Math.round((parent.width - width) / 2)
+        y: Math.round((parent.height - height) / 2)
+
+        onClosed:
+        {
+            if (yes)
+            {
+                sudoku.clear_scores()
+                scoreListWithoutHintsModel.clear()
+                scoreListWithHintsModel.clear()
+            }
+        }
+    }
+
     onOpened:
     {
         var current_profile = qsTr("Current game layout (hidden / open): ")
@@ -265,6 +312,11 @@ Popup
     {
         fill_score_without_hints()
         fill_score_with_hints()
+    }
+
+    function clear_score_stats()
+    {
+        clearYesNoPopup.open()
     }
 
     function fill_score_without_hints()

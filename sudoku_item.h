@@ -62,6 +62,7 @@ public:
     Q_INVOKABLE bool check_solution();
     Q_INVOKABLE QString get_current_game_profile_string();
     Q_INVOKABLE void update_scores(bool success);
+    Q_INVOKABLE void clear_scores();
     Q_INVOKABLE void start_score_listing_without_hints();
     Q_INVOKABLE QVariantMap get_current_score_record_without_hints();
     Q_INVOKABLE void start_score_listing_with_hints();

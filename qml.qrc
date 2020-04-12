@@ -40,5 +40,6 @@
         <file>ScorePopup.qml</file>
         <file>img/info.png</file>
         <file>Info.qml</file>
+        <file>YesNoPopup.qml</file>
     </qresource>
 </RCC>
