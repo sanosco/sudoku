@@ -386,6 +386,18 @@ void SudokuItem::update_scores(bool success)
     }
 }
 
+void SudokuItem::clear_scores()
+{
+    QString path = QDir::homePath() + "/" SUDOKU_SCORE_FILE_PATH;
+    QFile file(path);
+
+    if (file.exists())
+        file.remove();
+
+    m_score_without_hints.clear();
+    m_score_with_hints.clear();
+}
+
 void SudokuItem::start_score_listing_without_hints()
 {
     m_current_score_record_without_hints = m_score_without_hints.cbegin();
