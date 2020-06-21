@@ -459,8 +459,6 @@ void SudokuItem::generate_new_puzzle(uint lvl)
 
     clear_marked_contradicting_positions();
 
-    m_board.clear();
-    m_puzzle.clear();
     m_hidden_count = 0;
 
     m_sudoku.make_matrix();
